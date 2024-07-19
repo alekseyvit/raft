@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	raft "github.com/shaj13/raft"
-	"github.com/shaj13/raft/transport"
+	raft "github.com/alekseyvit/raft"
+	"github.com/alekseyvit/raft/transport"
 	"github.com/stretchr/testify/require"
 )
 

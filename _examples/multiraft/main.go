@@ -18,11 +18,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/alekseyvit/raft"
+	"github.com/alekseyvit/raft/raftlog"
+	"github.com/alekseyvit/raft/transport"
+	"github.com/alekseyvit/raft/transport/raftgrpc"
 	"github.com/gorilla/mux"
-	"github.com/shaj13/raft"
-	"github.com/shaj13/raft/raftlog"
-	"github.com/shaj13/raft/transport"
-	"github.com/shaj13/raft/transport/raftgrpc"
 	"google.golang.org/grpc"
 )
 

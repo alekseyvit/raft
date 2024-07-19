@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alekseyvit/raft/internal/raftpb"
+	"github.com/alekseyvit/raft/internal/transport"
+	"github.com/alekseyvit/raft/raftlog"
 	"github.com/golang/mock/gomock"
-	"github.com/shaj13/raft/internal/raftpb"
-	"github.com/shaj13/raft/internal/transport"
-	"github.com/shaj13/raft/raftlog"
 	"github.com/stretchr/testify/require"
 )
 

@@ -1,4 +1,4 @@
-module github.com/shaj13/raft
+module github.com/alekseyvit/raft
 
 go 1.22
 
