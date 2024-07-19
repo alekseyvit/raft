@@ -5,10 +5,10 @@ import (
 	"context"
 	"net/http"
 
-	itransport "github.com/shaj13/raft/internal/transport"
-	"github.com/shaj13/raft/internal/transport/rafthttp"
-	"github.com/shaj13/raft/raftlog"
-	"github.com/shaj13/raft/transport"
+	itransport "github.com/alekseyvit/raft/internal/transport"
+	"github.com/alekseyvit/raft/internal/transport/rafthttp"
+	"github.com/alekseyvit/raft/raftlog"
+	"github.com/alekseyvit/raft/transport"
 )
 
 func init() {

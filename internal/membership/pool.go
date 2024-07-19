@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/shaj13/raft/internal/raftpb"
-	"github.com/shaj13/raft/raftlog"
+	"github.com/alekseyvit/raft/internal/raftpb"
+	"github.com/alekseyvit/raft/raftlog"
 	"golang.org/x/sync/errgroup"
 )
 

@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
+	transportmock "github.com/alekseyvit/raft/internal/mocks/transport"
+	"github.com/alekseyvit/raft/internal/raftpb"
+	"github.com/alekseyvit/raft/raftlog"
 	"github.com/golang/mock/gomock"
-	transportmock "github.com/shaj13/raft/internal/mocks/transport"
-	"github.com/shaj13/raft/internal/raftpb"
-	"github.com/shaj13/raft/raftlog"
 	"github.com/stretchr/testify/require"
 	"go.etcd.io/etcd/raft/v3"
 	etcdraftpb "go.etcd.io/etcd/raft/v3/raftpb"
