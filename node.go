@@ -15,6 +15,7 @@ import (
 	"github.com/alekseyvit/raft/internal/storage/disk"
 	"github.com/alekseyvit/raft/internal/transport"
 	etransport "github.com/alekseyvit/raft/transport"
+	"go.etcd.io/etcd/raft/v3"
 	etcdraftpb "go.etcd.io/etcd/raft/v3/raftpb"
 )
 
@@ -234,6 +235,23 @@ func (n *Node) Snapshot() (io.ReadCloser, error) {
 
 	meta := snap.Metadata
 	return n.storage.Snapshotter().Reader(meta.Term, meta.Index)
+}
+
+// It is not required to consume or store SoftState.
+func (n *Node) SoftStatus() (raft.SoftState, error) {
+	st, err := n.engine.Status()
+	if err != nil {
+		return raft.SoftState{}, err
+	}
+	return st.SoftState, nil
+}
+
+func (n *Node) HardState() (etcdraftpb.HardState, error) {
+	st, err := n.engine.Status()
+	if err != nil {
+		return etcdraftpb.HardState{}, err
+	}
+	return st.HardState, nil
 }
 
 func (n *Node) TermIndex() (uint64, uint64, error) {
